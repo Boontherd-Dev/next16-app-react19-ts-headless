@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "env-cmd -f .env.dev next dev --port 3000",
+    "dev:local": "env-cmd -f .env.local next dev --port 3000",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lodash": "^4.17.21",
@@ -23,6 +25,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4",
+    "@types/axios": "^0.9.36",
     "@types/lodash": "^4.17.20",
     "@types/node": "^20",
     "@types/react": "^19",
@@ -30,7 +33,9 @@
     "@types/styled-components": "^5.1.35",
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
+    "axios": "^1.13.0",
     "babel-plugin-react-compiler": "1.0.0",
+    "cookies-next": "^6.1.1",
     "env-cmd": "^11.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.0",
