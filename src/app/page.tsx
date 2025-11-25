@@ -1,8 +1,15 @@
+import { ShieldCheck, Lock, LogIn } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ShieldCheck, Lock, LogIn } from 'lucide-react';
+
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
 
 export default function Home() {
   return (
@@ -21,7 +28,8 @@ export default function Home() {
             Next.js 16 with Authentication
           </h1>
           <p className='text-lg text-muted-foreground max-w-2xl'>
-            A complete authentication setup with middleware, protected routes, and shadcn/ui components
+            A complete authentication setup with middleware, protected routes,
+            and shadcn/ui components
           </p>
         </div>
 
@@ -32,13 +40,12 @@ export default function Home() {
                 <ShieldCheck className='h-5 w-5 text-green-600' />
                 Authentication
               </CardTitle>
-              <CardDescription>
-                JWT-based token authentication
-              </CardDescription>
+              <CardDescription>JWT-based token authentication</CardDescription>
             </CardHeader>
             <CardContent>
               <p className='text-sm text-muted-foreground mb-4'>
-                Secure authentication with access tokens stored in HTTP-only cookies.
+                Secure authentication with access tokens stored in HTTP-only
+                cookies.
               </p>
               <Button asChild className='w-full'>
                 <Link href='/login'>
@@ -61,12 +68,11 @@ export default function Home() {
             </CardHeader>
             <CardContent>
               <p className='text-sm text-muted-foreground mb-4'>
-                Try accessing the dashboard without authentication to see the middleware in action.
+                Try accessing the dashboard without authentication to see the
+                middleware in action.
               </p>
               <Button asChild variant='outline' className='w-full'>
-                <Link href='/dashboard'>
-                  View Dashboard
-                </Link>
+                <Link href='/dashboard'>View Dashboard</Link>
               </Button>
             </CardContent>
           </Card>
@@ -77,16 +83,19 @@ export default function Home() {
                 <ShieldCheck className='h-5 w-5 text-purple-600' />
                 shadcn/ui
               </CardTitle>
-              <CardDescription>
-                Beautiful UI components
-              </CardDescription>
+              <CardDescription>Beautiful UI components</CardDescription>
             </CardHeader>
             <CardContent>
               <p className='text-sm text-muted-foreground mb-4'>
-                Pre-configured with shadcn/ui components for a modern, accessible interface.
+                Pre-configured with shadcn/ui components for a modern,
+                accessible interface.
               </p>
               <Button asChild variant='secondary' className='w-full'>
-                <a href='https://ui.shadcn.com' target='_blank' rel='noopener noreferrer'>
+                <a
+                  href='https://ui.shadcn.com'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
                   Learn More
                 </a>
               </Button>

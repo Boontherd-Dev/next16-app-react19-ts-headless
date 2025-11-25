@@ -80,6 +80,7 @@ export function proxy(request: NextRequest) {
     '/login',
     '/register',
     '/access-denied',
+    '/health',
     '/', // Home page
   ];
 

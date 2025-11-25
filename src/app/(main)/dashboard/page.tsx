@@ -1,6 +1,7 @@
 import { CheckCircle2, LayoutDashboard, Lock, User } from 'lucide-react';
 import { cookies } from 'next/headers';
 
+import { LogoutButton } from '@/components/logout-button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import {
@@ -10,7 +11,6 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import { LogoutButton } from '@/components/logout-button';
 
 export default async function DashboardPage() {
   // Get the access token from cookies (server component)

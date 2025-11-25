@@ -2,6 +2,7 @@ import './globals.css';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 
+import { ConfigProvider } from '@/contexts/config-context';
 import { lineSeedSans } from '@/fonts/LineSeedSans';
 import StyledComponentsRegistry from '@/lib/registry';
 
@@ -18,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={`${lineSeedSans.className} antialiased`}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <ConfigProvider>
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </ConfigProvider>
       </body>
     </html>
   );
