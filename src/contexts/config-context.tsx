@@ -8,12 +8,8 @@ import {
   ReactNode,
 } from 'react';
 
-interface Config {
-  apiEndpoint: string;
-}
-
 interface AppConfig {
-  config: Config;
+  apiEndpoint: string;
 }
 
 const ConfigContext = createContext<AppConfig | null>(null);
